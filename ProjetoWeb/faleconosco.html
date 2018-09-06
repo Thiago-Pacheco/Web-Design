@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Google glass</title>
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+
+    <script src="js/script.js"></script>
+
+    <script src="js/math.js"></script>
+
+    
+
+   </head>
+
+<body>
+
+    <div id="interface">
+
+        <header id="cabecalho">
+
+            <h1>Google Glass</h1>
+
+            <h2>A revolução do Google está chegando</h2>
+
+            <img src="imagem/contato.png" id="icone">
+
+            <nav id="menu">
+
+                <h1>Menu Principal</h1>
+
+                <ul>
+
+                    <li onmousemove="mudaFoto('imagem/home.png')" onmouseout="mudaFoto('imagem/contato.png')">
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li onmousemove="mudaFoto('imagem/especificacoes.png')" onmouseout="mudaFoto('imagem/contato.png')">
+                        <a href="especificacoes.html">Especificações</a>
+                    </li>
+
+                    <li onmousemove="mudaFoto('imagem/fotos.png')" onmouseout="mudaFoto('imagem/contato.png')">
+                        <a href="fotos.html">Fotos</a>
+                    </li>
+
+                    <li onmousemove="mudaFoto('imagem/multimidia.png')" onmouseout="mudaFoto('imagem/contato.png')">
+                        <a href="multimidia.html">Multimídia</a>
+                    </li>
+
+                    <li onmousemove="mudaFoto('imagem/icone-contato.png')" onmouseout="mudaFoto('imagem/contato.png')">
+                        <a href="faleconosco.html">Fale conosco</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section id="corpofull">
+
+            <article id="noticia">
+
+                <header id="cabecalho-artigo">
+
+                    <div>
+
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>Thiago Pacheco</h2>
+                        <h3 class="direita">2018</h3>
+
+                    </div>
+
+                </header>
+
+                <form method="POST" id="fcontato" oninput="calcularTotal();">
+
+                    <fieldset id="usuario">
+
+                        <legend>Identificação do usuario</legend>
+
+                        <p>
+                            <label for="cnome">Nome</label> 
+                            
+                            <input type="text" name="tnome" id="cnome" size="20" maxlength="30"
+                             placeholder="Nome completo"/>
+                        </p>
+
+                        <p>
+                            <label for="csenha">Senha</label>
+                            
+                            <input type="password" name="tsenha" id="csenha" size="8" maxlength="8"
+                            placeholder="8 digitos"/>
+                        </p>
+
+                        <p>
+
+                            <label for="cemail">E-mail</label>
+
+                            <input type="email" name="temail" id="cemail" size="20" maxlength="40"
+                            placeholder="E-mail"/>
+                        </p>
+
+                        <fieldset id="sexo">
+
+                            <legend>Sexo</legend>
+
+                            <input type="radio" name="tsexo" id="cmasc"/>
+
+                            <label for="cmasc">Masculino</label> <br/>
+
+                            <input type="radio" name="tsexo" id="cfem"/>
+
+                            <label for="cfem">Feminino</label>
+
+                        </fieldset>
+
+                        <p>
+                           
+                            <label>Data de Nascimento</label>
+
+                            <input type="date" name="tnasc" id="cnasc"/>
+
+                        </p>
+                        
+
+                    </fieldset>
+
+                    <fieldset id="endereco">
+
+                        <legend>Endereço do usuario</legend>
+
+                        <p>
+
+                            <label for="clogra">
+                                Logradouro
+                            </label>
+
+                            <input type="text" name="tlogra" id="clogra" size="13" maxlength="80"
+                             placeholder="Logradouro"/>
+                   
+
+                        </p>
+
+                        <p>
+
+                                <label for="cnum">
+                                        Numero
+                                </label>
+        
+                                 <input type="number" name="tnum" id="cnum" size="13" min="0" max="99999"/>
+
+                        </p>
+
+                        <p>
+
+                                <label for="cestado">Estado</label>
+    
+                                <select name="sest" id="cestado">
+    
+                                    <option>Pernambuco</option>
+    
+                                    <option>Sao Paulo</option>
+    
+                                    <option>Rio de Janeiro</option>    
+                                    
+                                </select>
+    
+                            </p>
+
+                            <p>
+                                <label for="ccid">Cidade</label>
+
+                               <input type="text" name="tcid" id="ccid" maxlength="40" size="20" 
+                                placeholder="Cidade" list="cidades"/>
+
+                                <datalist id="cidades">
+
+                                    <option>Recife</option>
+
+                                    <option>Jaboatao dos Guararapes</option>
+
+
+                                </datalist>
+
+                            </p>
+ 
+                    </fieldset>
+
+                    <fieldset id="mensagem">
+
+                        <legend>Mensagem do usuario</legend>
+
+                        <p>
+                            <label for="curg">Grau de urgencia</label>
+
+                            <input type="range" name="turg" id="curg" min="0" max="10"/>
+                            
+                        </p>
+
+                        <p>
+                            <label for="cmsg">Mensagem</label>
+
+                            <textarea name="tmsg" id="cmsg" cols="45" rows="5"
+                             placeholder="Deixe sua mensagem"></textarea>
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset id="pedido">
+
+                        <legend>Quero um Google glass</legend>
+
+                        <p>
+                            <input type="checkbox" name="tped" id="cped"/>
+                            <label id="cped">Gostaria e adquirir um Google glass quando disponivel</label>
+                        </p>
+
+                        <p>
+                            <label id="ccor">Cor</label>
+
+                            <input type="color" name="tcor" id="ccor"/>
+                        </p>
+
+                        <p>
+                            <label id="cqtd">Quantidade</label>
+
+                            <input type="number" name="tqtd" id="cqtd" min="0" max="5"/>
+                        </p>
+
+                        <p>
+                            <label id="ctot">Preco total</label>
+
+                            <input type="text" name="ttot" id="ctot" placeholder="Total a pagar" readonly/>
+                        </p>    
+                        
+                    </fieldset>
+
+                    <input type="submit" value="Enviar"/>
+
+                </form>
+
+            </article>
+
+        </section>
+
+        <footer id="rodape">
+
+            <p>
+                    Thiago Pacheco
+                <br/> Facebook | Twitter
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
